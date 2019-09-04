@@ -49,7 +49,7 @@ RUN mkdir -p /var/log/shiny-server \
 	&& chown shiny:shiny -R /opt/shiny-server/samples/sample-apps \
 	&& chmod 755 -R /opt/shiny-server/samples/sample-apps 
 
-COPY /shiny-files /srv/shiny-server
+COPY /shinyTest /srv/shiny-server/shinyTest
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY welcome.html /opt/shiny-server/samples/welcome.html
 RUN mkdir -p /var/log/supervisor \

@@ -7,8 +7,7 @@ services:
       - "3838:3838"
     volumes:
     # Path on the host, relative to the Compose file
-      - ./R/shiny-files:/srv/shiny-server
-      - ./R/dash-files:/R
+      - ./R:/srv/shiny-server
     networks:
         my_app_network:
             ipv4_address: 172.28.1.2
